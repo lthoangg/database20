@@ -24,7 +24,7 @@ connection = create_connection("localhost", "root", "123456")
 
 # print data
 
-# for info in cursor.fetchall():
+# for info in cursor.fetchall():   
 #     print(info[0], info[1])
 
 connection.close()
