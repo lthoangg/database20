@@ -37,7 +37,7 @@ create table CLASSES(
 	id int not null primary key auto_increment,
     classname varchar(2) not null,
     subject varchar(15) not null,
-    day varchar(12) not null,
+    schedule varchar(12) not null,
     timestart time not null,
     timeend time not null,
     teacherID int not null,
