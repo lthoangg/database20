@@ -1,0 +1,5 @@
+classname,subject,day,timestart,timeend,teacherID,fee
+A0,ADS,Monday,08:30, 11:30, 1, 30
+A1,DB,Tuesday,14:00, 16:00, 2,30
+A2,DIP,Wednesday,08:30, 11:30, 3,30
+A3,OS,Thursday,14:00, 16:00, 4,30
