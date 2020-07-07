@@ -15,7 +15,7 @@ create table Operators(
 );
 create table TEACHERS(
 	id int not null primary key auto_increment,
-    employeeID int not null, # reference to employees.id for me!
+    employeeID int not null,
     quality varchar(45) not null,
     classID int not null
 );
@@ -25,12 +25,12 @@ create table employees(
     lname VARCHAR(45) NOT NULL,
     address varchar(100) not null,
     age int not null
-)
+);
 create table salary(
     id int not null primary key auto_increment,
-    employeeID int, --referencetoEmployees.ID please
-    salary int 
-)
+    employeeID int not null,
+    salary int not null
+);
 create table STUDENTS(
 	id int not null primary key auto_increment,
     fname varchar(45) not null,
