@@ -132,4 +132,8 @@ ALTER TABLE salary
   ADD CONSTRAINT salary_ibfk_1 FOREIGN KEY (employeeID) REFERENCES employees (id);
 
 ALTER TABLE `subject`
-  ADD CONSTRAINT subject_ibfk_1 FOREIGN KEY (subjectid) REFERENCES classes (subjectID); FOREIGN KEY (subjectid) REFERENCES classes (subjectID);
+  ADD CONSTRAINT subject_ibfk_1 FOREIGN KEY (subjectid) REFERENCES classes (subjectID);
+
+ALTER TABLE teachers
+  ADD CONSTRAINT teachers_ibfk_1 FOREIGN KEY (id) REFERENCES classes (teacherID);
+COMMIT;
