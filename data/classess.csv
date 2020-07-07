@@ -1,5 +1,0 @@
-classname,subject,schedule,timestart,timeend,teacherID,fee
-A0,ADS,Monday,8h30 AM,11h30 AM,1,30$
-A1,DB,Tuesday,14h PM,16h PM,2,30$
-A2,DIP,Wednesday,8h30 AM,11h30 AM,3,30$
-A3,OS,Thursday,14h PM,16h PM,4,30$

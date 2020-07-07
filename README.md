@@ -4,10 +4,15 @@
 ```python
 pip install -r requirements.txt
 ```
-2. Run CreateASchema.sql
-3. Run CreateTables.sql
-4. Run insert.py
-5. Run main.py 
+2. Run create.sql
+3. Run
+```
+python insert.py
+```
+4. Run
+```
+python main.py
+```
 ## Members:
 - Le Trong Hoang BI9-241
 - Doan Trung Kien BI9-130
