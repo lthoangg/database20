@@ -114,8 +114,9 @@ class Window(Tk):
         students = Button(self, text="Show students", command= self.show_student)
         self.labels = [hello]
         self.buttons = [classes, teachers, students]
+        self.labels[0].grid(row=0, column=1, sticky=W)
         for i in range(3):
-            self.buttons[i].grid(row=0, column=i, sticky=W)
+            self.buttons[i].grid(row=1, column=i, sticky=W)
 
     def show_class(self):
         try:
