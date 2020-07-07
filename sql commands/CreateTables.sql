@@ -11,7 +11,7 @@ drop table if exists salary;
 CREATE TABLE classes (
   id int(11) NOT NULL,
   classname varchar(2) NOT NULL,
-  subject int(15) NOT NULL,
+  subjectID int(15) NOT NULL,
   schedule varchar(12) NOT NULL,
   timestart varchar(6) NOT NULL,
   timeend varchar(6) NOT NULL,
@@ -69,7 +69,8 @@ CREATE TABLE teachers (
 
 ALTER TABLE classes
   ADD PRIMARY KEY (id),
-  ADD KEY teacherID (teacherID) USING BTREE;
+  ADD KEY teacherID (teacherID) USING BTREE,
+  ADD KEY subjectID (subjectID);
 
 ALTER TABLE employees
   ADD PRIMARY KEY (id);
@@ -131,8 +132,4 @@ ALTER TABLE salary
   ADD CONSTRAINT salary_ibfk_1 FOREIGN KEY (employeeID) REFERENCES employees (id);
 
 ALTER TABLE `subject`
-  ADD CONSTRAINT subject_ibfk_1 FOREIGN KEY (subjectid) REFERENCES classes (id);
-
-ALTER TABLE teachers
-  ADD CONSTRAINT teachers_ibfk_1 FOREIGN KEY (id) REFERENCES classes (teacherID);
-COMMIT;
+  ADD CONSTRAINT subject_ibfk_1 FOREIGN KEY (subjectid) REFERENCES classes (subjectID); FOREIGN KEY (subjectid) REFERENCES classes (subjectID);
