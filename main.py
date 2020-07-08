@@ -63,7 +63,7 @@ class Window(Tk):
                 # password = self.pass_pholder.get()
                 host = "localhost",
                 user = "root",
-                password = "123456",
+                password = "",
                 database= "project2020"
             )
             print("Server connected")
@@ -89,7 +89,7 @@ class Window(Tk):
 
         if var.get() == roles[0]:
             submit = Button(self, text="submit", command=self.operator)
-        elif role.get() == roles[1]:
+        elif var.get() == roles[1]:
             submit = Button(self, text="submit", command=self.teacher)
         else:
             submit = Button(self, text="submit", command=None)
@@ -144,6 +144,14 @@ class Window(Tk):
         name = self.entries[0].get()
         self.clear()
         hello = Label(self, text = f"Hello teacher {name}")
+
+        classes = Button(self, text="Show classes", command= self.show_class)
+        students = Button(self, text="Show students", command= self.show_student)
+        self.labels = [hello]
+        self.buttons = [classes, teachers, students]
+        self.labels[0].grid(row=0, column=1, sticky=W)
+        for i in range(3):
+            self.buttons[i].grid(row=1, column=i, sticky=W)
         
 
 def main():

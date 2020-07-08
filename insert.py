@@ -5,7 +5,7 @@ try:
     conn = connector.connect(
     host ='localhost',
     user= 'root',
-    password='123456'
+    password=''
     )
     cursor = conn.cursor()
     cursor.execute('use project2020;')
