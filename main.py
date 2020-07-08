@@ -57,6 +57,9 @@ class Window(Tk):
 
     def check_server(self):
         try:
+            print(self.host_pholder.get())
+            print(self.user_pholder.get())
+            print(self.pass_pholder.get())
             self.mydb = connector.connect(
                 # host = self.host_pholder.get(),
                 # user = self.user.get(),
@@ -68,6 +71,7 @@ class Window(Tk):
             )
             print("Server connected")
             self.Exec = self.mydb.cursor()
+            self.Exec.execute("use project2020;")
             print("Server worked")
         except:
             print("No server! Try again")
@@ -86,10 +90,10 @@ class Window(Tk):
         var = StringVar(self)
         var.set(roles[0])
         role = OptionMenu(self, var, roles[0], roles[1])
-
+        print(var.get())
         if var.get() == roles[0]:
             submit = Button(self, text="submit", command=self.operator)
-        elif role.get() == roles[1]:
+        elif var.get() == roles[1]:
             submit = Button(self, text="submit", command=self.teacher)
         else:
             submit = Button(self, text="submit", command=None)
